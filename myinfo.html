@@ -1,0 +1,12 @@
+<div ng-if="userData">
+    <h2>My Info</h2>
+    <p>First Name: {{ userData.firstName }}</p>
+    <!-- Display other user info -->
+    <p>Favorite Menu Item:</p>
+    <img ng-src="{{ userData.favoriteMenuItem.image_url }}" alt="{{ userData.favoriteMenuItem.name }}">
+    <p>{{ userData.favoriteMenuItem.name }}</p>
+    <p>{{ userData.favoriteMenuItem.description }}</p>
+</div>
+<div ng-if="!userData">
+    Not Signed Up Yet. <a ng-click="goToSignUp()">Sign up Now!</a>
+</div>

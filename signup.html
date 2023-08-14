@@ -1,0 +1,10 @@
+<form name="signupForm" ng-submit="submitForm()" novalidate>
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" ng-model="user.firstName" required>
+
+    <!-- Other form fields: last name, email, phone number, favorite dish menu number -->
+
+    <button type="submit" ng-disabled="signupForm.$invalid">Submit</button>
+</form>
+<p ng-show="successMessage">Your information has been saved</p>
+<p ng-show="errorMessage">No such menu number exists</p>
